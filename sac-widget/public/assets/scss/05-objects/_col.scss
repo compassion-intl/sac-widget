@@ -1,0 +1,36 @@
+.col-base,
+.col-auto,
+.col-none {
+	padding-right: $grid-gutter;
+	padding-left: $grid-gutter;
+}
+
+.col {
+	flex: 1;
+}
+
+.col {
+	@extend .col-base; 
+
+	@for $i from 1 through $grid-base {
+		&-#{$i} {
+			@extend .col-base;
+		}
+
+		@each $key, $value in $grid-breakpoints {
+			@if $value != 0rem {
+				&-#{$key} {
+					&-#{$i} {
+						@extend .col-base;
+					}
+				}
+			}
+		}
+	}
+}
+
+.col {
+	@include styleAllBreakpoints() {
+		@include columnWidths();
+	}
+}

@@ -1,0 +1,32 @@
+$grid-base: 12;
+$grid-breakpoints: (
+	xxs: 0rem,
+	xs: 22.5rem,
+	sm: 32.5rem,
+	md: 45rem,
+	lg: 62.5rem,
+	xl: 80rem
+);
+$grid-gutter: 1rem;
+
+$spacing-axis: (
+	all: (),
+	t: (top),
+	b: (bottom),
+	tb: (top, bottom),
+	r: (right),
+	l: (left),
+	rl: (right, left)
+);
+
+$spacing-units: (
+	0: 0rem,
+	1: .25rem,
+	2: .5rem,
+	3: .75rem,
+	4: 1rem,
+	5: 2rem,
+	6: 3rem,
+	7: 4rem,
+	8: 5rem
+);

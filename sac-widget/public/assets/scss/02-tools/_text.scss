@@ -1,0 +1,47 @@
+@mixin textAlignments() {
+	@each $alignment in $text-alignments {
+		&-#{$alignment} {
+			text-align: $alignment;
+		}
+	}
+}
+
+@mixin textColors() {
+	@each $key, $value in $colors {
+		&-#{$key} {
+			color: $value;
+		}
+	}
+}
+
+@mixin textDecorations() {
+	@each $decoration in $text-decorations {
+		&-#{$decoration} {
+			text-decoration: $decoration;
+		}
+	}
+}
+
+@mixin textSizes() {
+	@each $key, $value in $text-units {
+		&-#{$key} {
+			font-size: $value;
+		}
+	}
+}
+
+@mixin textTransforms() {
+	@each $transform in $text-transforms {
+		&-#{$transform} {
+			text-transform: $transform;
+		}
+	}
+}
+
+@mixin textWeights() {
+	@each $key in $text-weights {
+		&-#{$key} {
+			font-weight: $key;
+		}
+	}
+}

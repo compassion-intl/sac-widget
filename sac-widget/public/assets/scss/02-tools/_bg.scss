@@ -1,0 +1,7 @@
+@mixin backgroundColors() {
+	@each $key, $value in $colors {
+		&-#{$key} {
+			background-color: $value;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.p {
+	@include styleAllBreakpoints() {
+		@include spacingUnits(padding);
+	}
+}
+
+.m {
+	@include styleAllBreakpoints() {
+		@include spacingUnits(margin);
+	}
+}

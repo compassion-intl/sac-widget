@@ -1,0 +1,50 @@
+@mixin columnWidths() {
+	@for $i from 0 through $grid-base {
+		@if $i == 0 {
+			flex: 1;
+			width: unset;
+		} @else {
+			&-#{$i} {
+				flex: none;
+				width: calc((#{$i} / #{$grid-base}) * 100%);
+			}
+		}
+	}
+
+	&-auto {
+		flex: auto;
+		width: unset;
+	}
+	&-none {
+		flex: none;
+		width: unset;
+	}
+}
+
+@mixin styleAllBreakpoints() {
+	@each $key, $value in $grid-breakpoints {
+		@if $value == 0rem {
+			@content;
+		} @else {
+			@media (min-width: $value) {
+				&-#{$key} {
+					@content;
+				}
+			}
+		}
+	}
+}
+
+@mixin styleBreakpoint($breakpoint) {
+	@media (min-width: map-get($map: $grid-breakpoints, $key: $breakpoint)) {
+		@content;
+	}
+}
+
+@mixin gridOrder() {
+	@for $i from 0 through 5 {
+		&-#{$i} {
+			order: $i;
+		}
+	}
+}

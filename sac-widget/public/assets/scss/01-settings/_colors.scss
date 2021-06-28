@@ -1,0 +1,25 @@
+$black: #000;
+$blue: #005eb8;
+$blue100: #F1F9FF;
+$blue200: #D1E4F2;
+$blue500: #4BA3E4;
+$blue900: #00386d;
+$gray: #425563;
+$gray100: #f9f9f9;
+$gray300: #ccc;
+$gray700: #425563;
+$teal: #0086BF;
+$white: #fff;
+
+$colors: (
+	'black': $black,
+	'blue': $blue,
+	'blue100': $blue100,
+	'blue200': $blue200,
+	'blue900': $blue900,
+	'gray': $gray,
+	'gray100': $gray100,
+	'gray300': $gray300,
+	'teal': $teal,
+	'white': $white
+);

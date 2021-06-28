@@ -1,0 +1,7 @@
+.overflow {
+	@include styleAllBreakpoints() {
+		&-auto {
+			overflow: auto;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.ci-widget {
+    width: 100%;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    background: #fff;
+
+    &__col {
+        flex: 10rem;
+    }
+    
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -.5rem;
+    }
+
+    @media (min-width: 30rem) {
+        &__col {
+            flex: 13rem;
+        }
+    }
+}
+
+.ci-widget,
+.ci-widget * {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif !important;
+}

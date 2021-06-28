@@ -1,0 +1,10 @@
+.text {
+	@include styleAllBreakpoints() {
+		@include textAlignments();
+		@include textColors();
+		@include textDecorations();
+		@include textSizes();
+		@include textTransforms();
+		@include textWeights();
+	}
+}

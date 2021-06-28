@@ -1,0 +1,85 @@
+.ci-widget {
+    width: 100%;
+    max-width: 62.5rem;
+    margin: 0 auto;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.ci-widget,
+.ci-widget * {
+    box-sizing: border-box;
+}
+
+.ci-widget__col {
+	flex: 10rem;
+}
+
+.ci-widget__list {
+	display: flex;
+    flex-wrap: wrap;
+	margin: 0 -.5rem;
+}
+
+.ci-widget-card {
+    margin: 0 .5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.175);
+    text-align: center;
+}
+
+.ci-widget-card__image-holder {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-top: 100%;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.ci-widget-card__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    border-top-right-radius: .25rem;
+    border-top-left-radius: .25rem;
+	object-fit: cover;
+}
+
+.ci-widget-card__name,
+.ci-widget-card__country {
+    padding: .5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.ci-widget-card__name {
+    padding: .5rem;
+    border-bottom: 1px solid #ccc;
+    font-weight:bold;
+}
+
+.ci-widget-card__country {
+    font-size: .875rem;
+}
+
+.ci-widget-card__button {
+    display: block;
+    padding: .5rem;
+    margin: .25rem;
+    background: orange !important;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+@media (min-width: 30rem) {
+	.ci-widget__col {
+		flex: 13rem;
+	}
+}

@@ -1,0 +1,55 @@
+.ci-widget-card {
+    margin: 0 .5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,.175);
+    text-align: center;
+
+    &__image-holder {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: .25rem;
+        border-top-left-radius: .25rem;
+        object-fit: cover;
+    }
+
+    &__name,
+    &__country {
+        padding: .5rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__name {
+        padding: .5rem;
+        border-bottom: 1px solid #ccc;
+        font-weight:bold;
+    }
+
+    &__country {
+        font-size: .875rem;
+    }
+
+    &__button {
+        display: block;
+        padding: .5rem;
+        margin: .25rem;
+        background: orange !important;
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+}

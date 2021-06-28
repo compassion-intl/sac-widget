@@ -1,0 +1,33 @@
+@mixin spacingUnits($attribute) {
+	@each $key, $positions in $spacing-axis {
+		@each $key2, $value in $spacing-units {
+			@if $key == all {
+				&-#{$key2} {
+					#{$attribute}: $value;
+				}
+
+				@if $attribute != padding and $value != 0rem {
+					&-n#{$key2} {
+						#{$attribute}: $value;
+					}
+				}
+			} @else {
+				&-#{$key} {
+					&-#{$key2} {
+						@each $axis in $positions {
+							#{$attribute}-#{$axis}: $value;
+						}
+					}
+
+					@if $attribute != padding and $value != 0rem {
+						&-n#{$key2} {
+							@each $axis in $positions {
+								#{$attribute}-#{$axis}: $value * -1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

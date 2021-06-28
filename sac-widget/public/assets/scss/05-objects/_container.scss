@@ -1,0 +1,22 @@
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+	max-width: 100%;
+	padding-right: $grid-gutter;
+	padding-left: $grid-gutter;
+	margin: 0 auto;
+}
+
+.container {
+	@each $key, $value in $grid-breakpoints {
+		@if $value != 0rem {
+			@media (min-width: $value) {
+				&-#{$key} {
+					width: $value;
+				}
+			}
+		}
+	}
+}
